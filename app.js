@@ -8,7 +8,7 @@ async function obtenerDatosAngular() {
 
   const pagina = await navegador.newPage();
 
-  await pagina.goto("https://blog.angular.dev", { waitUntil: "networkidle2" });
+  await pagina.goto("https://blog.angular.dev", { waitUntil: "networkidle2", timeout: 60000});
 
   const datos = await pagina.evaluate(() => {
     const resultados = [];
